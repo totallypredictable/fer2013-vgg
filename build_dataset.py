@@ -2,6 +2,7 @@ from config import emotion_config as config
 from imgp.io import HDF5DatasetWriter
 import numpy as np
 import logging
+from typing import Union
 
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
@@ -16,7 +17,7 @@ f.__next__()
 for row in f:
     # extract the label, image and usage from the row
     label: str | int
-    image: str | np.array
+    image: Union[str, np.array]
     usage: str | int
     (label, image, usage) = row.strip().split(",")
     label = int(label)

@@ -1,7 +1,7 @@
 from os import path
 
 # define the base path to the dataset
-BASE_PATH = "~/datasets/fer2013"
+BASE_PATH = "/home/nashjr/datasets/fer2013"
 
 INPUT_PATH = path.sep.join([BASE_PATH, "fer2013/fer2013.csv"])
 
